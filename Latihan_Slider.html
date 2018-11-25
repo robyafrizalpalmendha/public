@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan Slider</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="ajax.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="slick/slick-theme.css">
+</head>
+<body>
+	<div class="container">
+		<div class="left"></div>
+		<div class="right">
+            <h1>Latihan Membuat Slider</h1>
+            <div id="sliderku">
+                <img src="assets/work1.jpg" alt="Gambar1">
+                <img src="assets/work2.jpg" alt="Gambar2">
+                <img src="assets/work4.jpeg" alt="Gambar3">
+                <img src="assets/work5.jpeg" alt="Gambar4">
+                <img src="assets/work6.jpeg" alt="Gambar5">
+            </div>
+		</div>
+	</div>	
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#sliderku").slick({
+                infinite : true,
+                slidesToShow : 3,
+                slidesToScroll: 1
+            });
+        })
+	</script>
+</body>
+</html>

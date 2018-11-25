@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Latihan WebHozz
+	</title>
+	<style>
+		img {
+		width: 500px;
+		height: 300px;
+		}
+		.container {
+			display: flex;
+			display: -mox-flex;
+			display: -webkit-flex;
+			background-color: #00bfff;
+		}
+		.contain {
+			background-color: #00fa9a;
+			width: 100px;
+			margin: 10px;
+			text-align: center;
+			font-family: sans-serif;
+			line-height: 75px;
+		}
+		.coba {
+			background-color: #00bfff;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<p>Menuju Biodata <a href="./biodata.html">-----</a></p>
+
+	<h2>Show and Hide Input Password</h2>
+	<div class="form">
+		<form>
+		<input class="pass" type="password" placeholder="masukkan password">
+		<br>
+		<input class="check" type="checkbox" name="">Show Password
+		<br>
+		<input type="submit" class="submit"  value="Login">
+		</form>
+	</div>
+	<hr>
+	<img src="./image1.jpg" alt="contoh_gambar">
+	<br>
+		<button class="tombol">Hide</button>
+		<button class="tombol1">Show</button>
+	<hr>
+
+	<div class="container">
+		<div class="contain">1</div>
+		<div class="contain">2</div>
+		<div class="contain">3</div>
+		<div class="contain">4</div>
+		<div class="contain">5</div>
+		<div class="contain">6</div>
+	</div>
+		<button class="ubah">Latar</button>
+		<button class="ubahlg">Latar Normal</button>
+		<br>
+		<button class="ubah1">Text</button>
+		<button class="ubah1lg">Text Normal</button>
+		<br>
+		<button class="slide">Slide Up and Down</button>
+</body>
+<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+	$(".check").click(function(){
+		if ($(this).is(":checked")) {
+			$(".pass").attr("type","text");
+		} else {
+			$(".pass").attr("type","password");
+		}
+	});
+
+	alert("Selamat Datang");
+	$(".tombol").click(function(){
+		$("img").hide('slow');
+	});
+	$(".tombol1").click(function(){
+		$("img").show('slow');
+	});
+
+	$(".slide").click(function(){
+		$(".container").slideToggle('slow');
+	});
+
+	$(".ubah").click(function(){
+		$(".container").css('background','violet');
+		$(".ubahlg").fadeIn('slow');
+	});
+	$(".ubah1").click(function(){
+		$(".contain").css('color','blue').css('fontSize','30px');
+		$(".ubah1lg").fadeIn('slow');
+	});
+});
+	$(".ubahlg").dblclick(function(){
+		$(".container").css('background','#00bfff');
+		$(this).addClass('coba');
+	});
+	$(".ubah1lg").dblclick(function(){
+		$(".contain").css('color','black').css('fontSize','16px');
+		$(this).addClass('coba');
+	});
+	$(".ubahlg,.ubah1lg").mouseleave(function(){
+		$(this).fadeOut('slow');
+	});
+</script>
+</html>

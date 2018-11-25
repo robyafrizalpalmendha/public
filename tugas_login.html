@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="left"></div>
+		<div class="right">
+			<div class="title"><h1>Welcome Back!</h1>
+			<h3>Please log in to continue</h3>
+			</div>
+			<div class="forms">
+			<form>
+				<p>Username</p>
+				<input type="text" name="username">
+				<p>Password</p>
+				<input type="password" name="password"><br>
+				<input type="checkbox" name="remember">Remember Me
+				<span id="remember"><a href="#">Forgot Password?</a></span>
+				
+				<div class="button-group">
+				<input  id="login" type="submit" name="" value="Login">
+				<input class="button-cstm" id="register" type="submit" name="" value="Create Account">
+				</div>
+				
+			</form>	
+			</div>
+		</div>
+	</div>
+	<!-- Situs tempat mencari Font Menarik : dafont.com & transfonter.org -->
+	<!-- Border-collapse adalah garis default-->
+	<!-- Position
+		* Static = tidak bs dirubah n default sesuai bawaan html
+		* Absolute = posisi absolute tepat mengikuti posisi yg telah kita tentukan
+		* Relative = mirip statis tapi bs digeser2
+		* Fixed = mirip absolute tapi posisi melekat/nempel tetap tidak berubah terhadap browser
+		* Sticky = gabungan static n fixed (posisi tetap seperti statis tetapi ketika akan hilang posisi tertinggal n menempel tetap dibrowser)
+	 -->
+	 <!-- Display
+		* Block = menguasai 1 blok (1 bagias dari kiri ke kanan dari parent)
+		* Inline-Block = 
+		* Flex = Flexible mengikuti ukuran parentnya
+	  -->
+
+	
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$("h1").text("Selamat Datang Roby!!");
+
+	$(document).ready(function(){
+		$("h3").text("Belajar Web Design!!");
+	});
+
+	$(document).ready(()=>{
+		$("p").append(" Selamat Belajar");
+		$("input[type='submit']").hide(2000,()=>{
+			$("h1").css("color","blue");
+		});
+	});
+	// $(document).ready(()=>{
+	// $("h3").addClass("pink");
+	// $("h3").removeClass("pink");
+	// $("h3").toggleClass("pink");
+
+	// var classButton = $("button").attr("class");
+	// $("a#register").attr("class",classButton);
+
+	// $("input[name='username']").val(); 
+
+	// });
+	// $(".button-group")on("click dblclick",()=>{
+	// 	$("h1").text("Selamat sudah berhasil masuk");
+	// });
+	// $("input[name='password']").on("keyup",function(){
+	// 	$("h1").html("Input sudah berubah value-nya" + $(this).val());
+	// })
+	</script>
+</body>
+</html>

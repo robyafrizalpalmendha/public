@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan Ajax</title>
+	<link rel="stylesheet" type="text/css" href="ajax.css">
+</head>
+<body>
+	<div class="container">
+		<div class="left"></div>
+		<div class="right">
+            <form action="contoh.php">
+            <h1>Latihan Ajax</h1>
+            <h3>User Detail ID</h3>
+            
+            <input type="text" id="idAjax">
+
+            <div class="container-user">
+                <img src="" alt="User picture dari Ajax" id="pictAjax">
+            </div>
+
+			<label>First Name :</label>
+            <label id="firstNameAjax"></label>
+            <br>
+                
+            <label>Last Name :</label>
+            <label id="lastNameAjax"></label>
+            </form>
+		</div>
+	</div>	
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $("#idAjax").on("change",function(){
+        $.ajax({
+            url: "https://reqres.in/api/users/"+$("#idAjax").val(),
+            dataType: "json",
+        }).always(function(res){
+           $("#pictAjax").attr("src",res.data.avatar);
+           $("#firstNameAjax").text(res.data.first_name);
+           $("#lastNameAjax").text(res.data.last_name);
+        });
+    });
+
+	</script>
+</body>
+</html>

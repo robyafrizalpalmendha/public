@@ -1,0 +1,91 @@
+@import url(font/stylesheet.css);
+/*Cara mengimpor font*/
+
+.title {
+	padding: 50px 180px;
+}
+
+h1	{
+	font-family: 'Beindog gite';
+	font-size: 30px;
+	padding-bottom: 2px;
+}
+h3 {
+	color: red;
+}
+
+.left{
+	width: 50%;
+	background-image: url("image1.jpg");
+	height: 100vh;
+	background-color: grey;
+	display: inline-block;
+	float: left;
+}
+.right {
+	width: 50%;
+	display: inline-block;
+	height: 100vh;
+	position: relative;
+	float: right;
+}
+.forms {
+	width: 268px;
+	height: 338px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+input[name="username"],{
+	margin-bottom: 24px;
+}
+input[type="text"],
+input[type="password"]{
+	width: 100%;
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 10px;
+	border: 1px solid #476b4f;
+	box-sizing: border-box;
+}
+input[type="checkbox"]{
+	float: left;
+}
+#remember span a {
+	font-weight: normal;
+	font-size: 11px;
+	display: inline-block;
+	margin: 3px;
+	float: left;
+}
+a {
+	float: right;
+	margin-right: 0;
+	text-decoration: none;
+}
+.button-group #login {
+	margin-right: 5px;
+	background-color: #476b4f;
+	color: white;
+}
+.button-cstm {
+	padding: 10px;
+	border: 1px solid #476b4f;
+	border-radius: 2px;
+	font-weight: bold;
+	background-color: white;
+	font-size: 14px;
+	margin: 0;
+}
+.button-group {
+	display: flex;
+	margin-top: 30px;
+}
+.button-group .button-cstm {
+	flex: 1 10px;
+}
+.button-group #register{
+	margin-left: 5px;
+}

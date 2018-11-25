@@ -1,0 +1,51 @@
+@import url(font/stylesheet.css);
+/*Cara mengimpor font*/
+
+body {
+    text-align: center
+}
+h1	{
+	font-family: 'Beindog gite';
+	font-size: 50px;
+	padding-bottom: 2px;
+}
+h3 {
+	color: red;
+}
+#idAjax {
+    border: 2px solid green;
+    margin-bottom: 10px;
+}
+#sliderku {
+	width: 500px;
+	margin: 0 auto;
+}
+.slick-initialized .slick-slide {
+	height: 150px;
+	object-fit: cover;
+	object-position: center;
+}
+.left{
+	width: 50%;
+	background-image: url("image1.jpg");
+	height: 100vh;
+	display: inline-block;
+	float: left;
+}
+.right {
+	width: 50%;
+	display: inline-block;
+	height: 100vh;
+	position: relative;
+	float: right;
+	background-color: rgba(103, 199, 25, 0.548);
+}
+.forms {
+	width: 268px;
+	height: 338px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In Form</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="left">
+			<img src="image2.png" class="user">
+			<h2>Hai.. Selamat Belajar</h2>
+		</div>
+		<div class="right">
+			<div class="title">
+				<h1>Welcome to My Life</h1>
+				<p>Please log in to continue</p>
+			</div>
+			<div class="forms">
+			<form>
+				<h3>Username</h3>
+				<input type="text" name="username" placeholder="masukkan nama">
+				<h3>Password</h3>
+				<input type="password" name="password" placeholder="isi password"><br>
+				<input type="checkbox" name="remember"><span id="me">Remember Me</span>
+				<span id="remember"><a href="#">Forgot Password?</a></span>
+				
+				<div class="button-group">
+				<input  id="login" type="submit" name="" value="Login">
+				<input class="button-cstm" id="register" type="submit" name="" value="Create Account">
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".forms").click(function(){
+	$(this).animate({height:"250px",width:"400px"});
+	$(this).animate({fontSize:"22px"});
+	})
+})
+$(document).ready(function() {
+	$("#login").delay(500).fadeIn();
+})
+// $(document).ready(()=>{
+	// $("h3").addClass("pink");
+	// $("h3").removeClass("pink");
+	// $("h3").toggleClass("pink");
+
+	// var classButton = $("button").attr("class");
+	// $("a#register").attr("class",classButton);
+
+	// $("input[name='username']").val(); 
+
+	// });
+$(".button-group").on("click",()=>{
+	$("h1").text("Selamat Datang");
+	$("h1").css({color:"#476b4f"});
+});
+
+// $(document).ready(function() {
+// $(".forms").click(function(){
+// 	var name=$("input[name='username']").val();
+// 	var pass=$("input[name='password']").val();
+
+// 	if (name!="" && pass!="") {
+// 		$(".forms").fadeOut();
+// 		$("h1").fadeIn();
+// 		$("h1").text("Selamat Datang"+name);
+// 		$("h1").animate({marginTop:"50px"});
+// 	};
+// })
+// })
+
+	// $("input[name='password']").on("keyup",function(){
+	// 	$("h1").html("Input sudah berubah value-nya" + $(this).val());
+	// })
+</script>
+<!-- Situs tempat mencari Font Menarik : dafont.com & transfonter.org -->
+	<!-- Border-collapse adalah garis default-->
+	<!-- Position
+		* Static = tidak bs dirubah n default sesuai bawaan html
+		* Absolute = posisi absolute tepat mengikuti posisi yg telah kita tentukan
+		* Relative = mirip statis tapi bs digeser2
+		* Fixed = mirip absolute tapi posisi melekat/nempel tetap tidak berubah terhadap browser
+		* Sticky = gabungan static n fixed (posisi tetap seperti statis tetapi ketika akan hilang posisi tertinggal n menempel tetap dibrowser)
+	 -->
+	 <!-- Display
+		* Block = menguasai 1 blok (1 bagias dari kiri ke kanan dari parent)
+		* Inline-Block = 
+		* Flex = Flexible mengikuti ukuran parentnya
+	  -->
+</html>
